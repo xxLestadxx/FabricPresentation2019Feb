@@ -1,9 +1,18 @@
+OS: Ubuntu 16.04
+
+
+Go to https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html and follow the instructions to download the pre-req and to install docker and docker composer and then to download the docker images after that do the following : 
+
+
 cd ~/fabric-dev-servers
 
-export FABRIC_VERSION=hlfv12
+export FABRIC_VERSION=hlfv12 (yours could be v14)
+
 ./startFabric
 
-./createPeerCard
+./createPeerAdminCard
+
+( you can see this tutorial https://hyperledger.github.io/composer/v0.19/tutorials/deploy-to-fabric-single-org.html)
 
 composer network install -a ./kingdom.bna -c PeerAdmin@hlfv1
 
